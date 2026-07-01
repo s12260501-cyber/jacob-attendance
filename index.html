@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅各組 出席表 Dashboard</title>
+<style>
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', sans-serif;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-400: #a3a3a3;
+  --gray-600: #525252;
+  --gray-800: #262626;
+  --blue-500: #3b82f6;
+  --green-500: #22c55e;
+  --red-500: #ef4444;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+  font-family: var(--font-sans); 
+  background: var(--gray-50); 
+  color: var(--gray-800); 
+  padding: 32px; 
+  line-height: 1.6;
+}
+.container { max-width: 960px; margin: 0 auto; }
+.header { 
+  margin-bottom: 32px; 
+  border-bottom: 1px solid var(--gray-200); 
+  padding-bottom: 16px;
+}
+.header h1 { 
+  font-size: 24px; 
+  font-weight: 600; 
+  letter-spacing: -0.02em;
+}
+.header .period { 
+  font-size: 14px; 
+  color: var(--gray-600); 
+  margin-top: 4px;
+}
+.summary { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 16px; 
+  margin-bottom: 32px;
+}
+.card { 
+  background: white; 
+  border: 1px solid var(--gray-200); 
+  padding: 20px; 
+  text-align: center;
+}
+.card .value { 
+  font-size: 36px; 
+  font-weight: 700; 
+  color: var(--blue-500);
+}
+.card .label { 
+  font-size: 13px; 
+  color: var(--gray-600); 
+  margin-top: 4px;
+}
+.card .rate { 
+  font-size: 12px; 
+  color: var(--gray-400); 
+  margin-top: 2px;
+}
+.table-container { 
+  background: white; 
+  border: 1px solid var(--gray-200); 
+  overflow: hidden;
+}
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-size: 14px;
+}
+th, td { 
+  padding: 12px 16px; 
+  text-align: left; 
+  border-bottom: 1px solid var(--gray-200);
+}
+th { 
+  background: var(--gray-100); 
+  font-weight: 500; 
+  font-size: 12px; 
+  color: var(--gray-600); 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em;
+}
+th.month { width: 80px; text-align: center; }
+td.month { 
+  text-align: center; 
+  font-weight: 600; 
+  width: 80px;
+}
+td.check { 
+  text-align: center; 
+  font-size: 16px;
+}
+td.check.present::before { 
+  content: "●"; 
+  color: var(--green-500);
+}
+td.check.absent::before { 
+  content: "○"; 
+  color: var(--gray-200);
+}
+tr:last-child td { border-bottom: none; }
+.footer { 
+  margin-top: 24px; 
+  font-size: 12px; 
+  color: var(--gray-400); 
+  text-align: right;
+}
+#status {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  padding: 8px 12px;
+  background: var(--gray-800);
+  color: var(--gray-100);
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#status.show { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>雅各組 出席統計</h1>
+    <div class="period">2026年4月 - 6月</div>
+  </div>
+
+  <div class="summary">
+    <div class="card">
+      <div class="value">8</div>
+      <div class="label">4月出席人數</div>
+      <div class="rate">/ 14 (57%)</div>
+    </div>
+    <div class="card">
+      <div class="value">9</div>
+      <div class="label">5月出席人數</div>
+      <div class="rate">/ 14 (64%)</div>
+    </div>
+    <div class="card">
+      <div class="value">9</div>
+      <div class="label">6月出席人數</div>
+      <div class="rate">/ 14 (64%)</div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th width="50">#</th>
+          <th>姓名</th>
+          <th class="month">4月</th>
+          <th class="month">5月</th>
+          <th class="month">6月</th>
+          <th width="60">總次</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr><td>2</td><td>鄭宗賢</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>3</td><td>李春秋</td><td class="check present"></td><td class="check absent"></td><td class="check absent"></td><td>1</td></tr><tr><td>4</td><td>藍雙紅</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>5</td><td>陳秋紅</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>6</td><td>張美琳</td><td class="check absent"></td><td class="check absent"></td><td class="check present"></td><td>1</td></tr><tr><td>7</td><td>宋彬嬋</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>8</td><td>蘇仁傑</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>9</td><td>方愷晴</td><td class="check absent"></td><td class="check present"></td><td class="check present"></td><td>2</td></tr><tr><td>10</td><td>朱文清</td><td class="check absent"></td><td class="check present"></td><td class="check present"></td><td>2</td></tr><tr><td>11</td><td>莊天盛</td><td class="check absent"></td><td class="check present"></td><td class="check absent"></td><td>1</td></tr><tr><td>12</td><td>范珠英</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>13</td><td>陳栢如</td><td class="check present"></td><td class="check absent"></td><td class="check present"></td><td>2</td></tr><tr><td>14</td><td>林彩群</td><td class="check absent"></td><td class="check absent"></td><td class="check present"></td><td>1</td></tr><tr><td>15</td><td>鍾秀英</td><td class="check absent"></td><td class="check absent"></td><td class="check present"></td><td>1</td></tr><tr style="background: var(--gray-100); font-weight: 600;"><td colspan="2">總計</td><td class="check">8</td><td class="check">9</td><td class="check">9</td><td>26</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">雅各組 出席表 Dashboard | 2026年7月1日</div>
+</div>
+<div id="status">已更新</div>
+<script>
+const evtSource = new EventSource("/events");
+evtSource.onmessage = function(e) {
+  if (e.data === "reload") {
+    const status = document.getElementById("status");
+    status.textContent = "資料已更新，重新整理中...";
+    status.classList.add("show");
+    setTimeout(() => location.reload(), 500);
+  }
+};
+evtSource.onerror = function() {
+  console.log("SSE connection lost, retrying...");
+};
+</script>
+</body>
+</html>
