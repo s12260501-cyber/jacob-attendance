@@ -116,19 +116,6 @@ tr:last-child td { border-bottom: none; }
   color: var(--gray-400); 
   text-align: right;
 }
-#status {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  padding: 8px 12px;
-  background: var(--gray-800);
-  color: var(--gray-100);
-  border-radius: 4px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-#status.show { opacity: 1; }
 </style>
 </head>
 <body>
@@ -140,14 +127,14 @@ tr:last-child td { border-bottom: none; }
 
   <div class="summary">
     <div class="card">
-      <div class="value">8</div>
+      <div class="value">11</div>
       <div class="label">4月出席人數</div>
-      <div class="rate">/ 14 (57%)</div>
+      <div class="rate">/ 14 (79%)</div>
     </div>
     <div class="card">
-      <div class="value">9</div>
+      <div class="value">10</div>
       <div class="label">5月出席人數</div>
-      <div class="rate">/ 14 (64%)</div>
+      <div class="rate">/ 14 (71%)</div>
     </div>
     <div class="card">
       <div class="value">9</div>
@@ -169,27 +156,12 @@ tr:last-child td { border-bottom: none; }
         </tr>
       </thead>
       <tbody>
-<tr><td>2</td><td>鄭宗賢</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>3</td><td>李春秋</td><td class="check present"></td><td class="check absent"></td><td class="check absent"></td><td>1</td></tr><tr><td>4</td><td>藍雙紅</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>5</td><td>陳秋紅</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>6</td><td>張美琳</td><td class="check absent"></td><td class="check absent"></td><td class="check present"></td><td>1</td></tr><tr><td>7</td><td>宋彬嬋</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>8</td><td>蘇仁傑</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>9</td><td>方愷晴</td><td class="check absent"></td><td class="check present"></td><td class="check present"></td><td>2</td></tr><tr><td>10</td><td>朱文清</td><td class="check absent"></td><td class="check present"></td><td class="check present"></td><td>2</td></tr><tr><td>11</td><td>莊天盛</td><td class="check absent"></td><td class="check present"></td><td class="check absent"></td><td>1</td></tr><tr><td>12</td><td>范珠英</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>13</td><td>陳栢如</td><td class="check present"></td><td class="check absent"></td><td class="check present"></td><td>2</td></tr><tr><td>14</td><td>林彩群</td><td class="check absent"></td><td class="check absent"></td><td class="check present"></td><td>1</td></tr><tr><td>15</td><td>鍾秀英</td><td class="check absent"></td><td class="check absent"></td><td class="check present"></td><td>1</td></tr><tr style="background: var(--gray-100); font-weight: 600;"><td colspan="2">總計</td><td class="check">8</td><td class="check">9</td><td class="check">9</td><td>26</td></tr>
+<tr><td>2</td><td>鄭宗賢</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>3</td><td>李春秋</td><td class="check present"></td><td class="check absent"></td><td class="check absent"></td><td>1</td></tr><tr><td>4</td><td>藍雙紅</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>5</td><td>陳秋紅</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>6</td><td>張美琳</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>7</td><td>宋彬嬋</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>8</td><td>蘇仁傑</td><td class="check present"></td><td class="check present"></td><td class="check present"></td><td>3</td></tr><tr><td>9</td><td>方愷晴</td><td class="check absent"></td><td class="check present"></td><td class="check present"></td><td>2</td></tr><tr><td>10</td><td>朱文清</td><td class="check absent"></td><td class="check present"></td><td class="check present"></td><td>2</td></tr><tr><td>11</td><td>莊天盛</td><td class="check absent"></td><td class="check present"></td><td class="check absent"></td><td>1</td></tr><tr><td>12</td><td>范珠英</td><td class="check present"></td><td class="check present"></td><td class="check absent"></td><td>2</td></tr><tr><td>13</td><td>陳栢如</td><td class="check present"></td><td class="check absent"></td><td class="check present"></td><td>2</td></tr><tr><td>14</td><td>林彩群</td><td class="check present"></td><td class="check absent"></td><td class="check present"></td><td>2</td></tr><tr><td>15</td><td>鍾秀英</td><td class="check present"></td><td class="check absent"></td><td class="check present"></td><td>2</td></tr><tr style="background: var(--gray-100); font-weight: 600;"><td colspan="2">總計</td><td class="check">11</td><td class="check">10</td><td class="check">9</td><td>30</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="footer">雅各組 出席表 Dashboard | 2026年7月1日</div>
 </div>
-<div id="status">已更新</div>
-<script>
-const evtSource = new EventSource("/events");
-evtSource.onmessage = function(e) {
-  if (e.data === "reload") {
-    const status = document.getElementById("status");
-    status.textContent = "資料已更新，重新整理中...";
-    status.classList.add("show");
-    setTimeout(() => location.reload(), 500);
-  }
-};
-evtSource.onerror = function() {
-  console.log("SSE connection lost, retrying...");
-};
-</script>
 </body>
 </html>
